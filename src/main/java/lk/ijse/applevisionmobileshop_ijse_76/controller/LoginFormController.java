@@ -12,6 +12,7 @@ import lk.ijse.applevisionmobileshop_ijse_76.dto.UserDTO;
 import lk.ijse.applevisionmobileshop_ijse_76.model.UserModel;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class LoginFormController {
 
@@ -28,11 +29,11 @@ public class LoginFormController {
     private final Session  currentSession = new Session();
 
     @FXML
-    private void login() throws IOException {
+    private void login() throws IOException, SQLException, ClassNotFoundException {
         signIn();
     }
 
-    private void signIn() throws IOException {
+    private void signIn() throws IOException, SQLException, ClassNotFoundException {
 
         String username = usernameField.getText();
         String password = passwordField.getText();

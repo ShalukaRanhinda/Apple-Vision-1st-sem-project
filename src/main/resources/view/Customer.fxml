@@ -6,192 +6,184 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.applevisionmobileshop_ijse_76.controller.CustomerFormController">
+<AnchorPane prefHeight="635.0" prefWidth="846.0" style="-fx-background-color: linear-gradient(to bottom, #c9a0ff, #8eb7ff);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.applevisionmobileshop_ijse_76.controller.CustomerFormController">
     <children>
-        <ImageView fitHeight="287.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <image>
-            <Image url="@../images/apple_png.jpg" />
-         </image>
-        </ImageView>
-        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #c7ecee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="TOP_CENTER" layoutX="44.0" layoutY="74.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: rgba(255,255,255,0.55); -fx-background-radius: 25;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
             <children>
-                <HBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #dff9fb;">
-                    <children>
-                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="482.0" text="Customer Management" textAlignment="CENTER">
-                            <font>
-                                <Font name="Algerian" size="36.0" />
-                            </font>
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.22348483403523764">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                        </Label>
-                    </children>
-                </HBox>
-                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="1000.0" spacing="10.0">
-                    <children>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID :" textAlignment="CENTER">
-                            <font>
-                                <Font name="Bell MT" size="17.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="100.0" right="12.0" />
-                            </HBox.margin>
-                        </Text>
-                  <Label fx:id="lblId" prefHeight="30.0" prefWidth="280.0" style="-fx-border-color: #192a56; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2; -fx-background-color: white;" />
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" textAlignment="CENTER">
-                            <font>
-                                <Font name="Bell MT" size="17.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="50.0" right="10.0" />
-                            </HBox.margin>
-                        </Text>
-                        <TextField fx:id="textName" prefHeight="30.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #192a56; -fx-border-radius: 10; -fx-border-width: 2;">
-                            <HBox.margin>
-                                <Insets left="11.0" />
-                            </HBox.margin>
-                        </TextField>
-                    </children>
+                <Label text="Customer Management">
+                    <font>
+                        <Font name="Times New Roman Bold" size="32.0" />
+                    </font>
+                    <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.10588235408067703" green="0.003921568859368563" blue="0.003921568859368563" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.7803921699523926" green="0.13725490868091583" blue="0.13725490868091583" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </RadialGradient>
+                    </textFill>
                     <VBox.margin>
-                        <Insets bottom="10.0" />
+                        <Insets top="20.0" />
                     </VBox.margin>
-                </HBox>
-                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="1000.0" spacing="10.0">
+                </Label>
+                <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="766.0">
                     <children>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" textAlignment="CENTER">
-                            <font>
-                                <Font name="Bell MT" size="17.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="100.0" />
-                            </HBox.margin>
-                        </Text>
-                        <TextField fx:id="textEmail" prefHeight="30.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #192a56; -fx-border-radius: 10; -fx-border-width: 2;">
-                            <HBox.margin>
-                                <Insets left="63.0" />
-                            </HBox.margin>
-                        </TextField>
-                  <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nic :" textAlignment="CENTER">
-                     <font>
-                        <Font name="Bell MT" size="17.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="50.0" right="38.0" />
-                     </HBox.margin>
-                  </Text>
-                        <TextField fx:id="textNic" prefHeight="30.0" prefWidth="276.0" style="-fx-background-radius: 10; -fx-border-color: #192a56; -fx-border-radius: 10; -fx-border-width: 2;" />
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="ID">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lblId" prefHeight="26.0" prefWidth="320.0" style="-fx-background-color: white;">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="Name">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="textName" prefHeight="26.0" prefWidth="320.0" promptText="Name">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
                     </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="766.0">
+                    <children>
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="Email">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="textEmail" prefHeight="26.0" prefWidth="320.0" promptText="Email">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="Nic">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="textNic" prefHeight="26.0" prefWidth="320.0" promptText="Nic">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="766.0">
+                    <children>
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="Address">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="textAddress" prefHeight="26.0" prefWidth="320.0" promptText="Address">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="58.0" prefWidth="337.0">
+                            <children>
+                                <Label text="Contact">
+                                    <font>
+                                        <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="textContact" prefHeight="26.0" prefWidth="320.0" promptText="Contact">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="50.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="69.0" prefWidth="640.0" spacing="20" style="-fx-padding: 20 0 0 0;">
+                    <children>
+                        <Button onAction="#onActionSave" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #C8F09E; -fx-background-radius: 25; -fx-text-fill: green; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" text="Save" />
+                        <Button onAction="#onActionUpdate" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #BAC3F5; -fx-background-radius: 25; -fx-text-fill: blue; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" text="Update" />
+                        <Button onAction="#onActionDelete" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #F0C0C0; -fx-background-radius: 25; -fx-text-fill: red; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" text="Delete" />
+                        <Button onAction="#onActionReset" prefHeight="40" prefWidth="108.0" style="-fx-background-color: #E8E6E6; -fx-background-radius: 25; -fx-text-fill: Black; -fx-font-size: 15px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 10,0.3,0,3);" text="Reset" />
+                    </children>
+                </HBox>
+                <TableView fx:id="tableCustomer" prefHeight="242.0" prefWidth="726.0" onMouseClicked="#setData" style="-fx-background-radius: 30;">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="136.0" style="-fx-background-radius: 15;" text="ID" />
+                        <TableColumn fx:id="nameColumn" minWidth="0.0" prefWidth="280.79998779296875" style="-fx-background-radius: 15;" text="Name" />
+                        <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="280.79998779296875" style="-fx-background-radius: 15;" text="Email" />
+                        <TableColumn fx:id="nicColumn" minWidth="0.0" prefWidth="280.79998779296875" style="-fx-background-radius: 15;" text="Nic" />
+                        <TableColumn fx:id="addressColumn" prefWidth="144.0" style="-fx-background-radius: 15;" text="Address" />
+                        <TableColumn fx:id="contactColumn" prefWidth="132.79996337890623" style="-fx-background-radius: 15;" text="Contact" />
+                    </columns>
                     <VBox.margin>
-                        <Insets bottom="10.0" />
+                        <Insets left="20.0" right="20.0" />
                     </VBox.margin>
-                </HBox>
-                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="1000.0" spacing="10.0">
-                    <children>
-                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Address  :" textAlignment="CENTER">
-                            <font>
-                                <Font name="Bell MT" size="17.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="100.0" />
-                            </HBox.margin>
-                        </Text>
-                        <TextField fx:id="textAddress" prefHeight="30.0" prefWidth="280.0" style="-fx-background-radius: 10; -fx-border-color: #192a56; -fx-border-radius: 10; -fx-border-width: 2;">
-                            <HBox.margin>
-                                <Insets left="43.0" />
-                            </HBox.margin>
-                        </TextField>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact :" textAlignment="CENTER">
-                            <font>
-                                <Font name="Bell MT" size="17.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="50.0" />
-                            </HBox.margin>
-                        </Text>
-                        <TextField fx:id="textContact" prefHeight="30.0" prefWidth="289.0" style="-fx-background-radius: 10; -fx-border-color: #192a56; -fx-border-radius: 10; -fx-border-width: 2;">
-                            <HBox.margin>
-                                <Insets left="8.0" />
-                            </HBox.margin>
-                        </TextField>
-                    </children>
-                    <VBox.margin>
-                        <Insets bottom="50.0" />
-                    </VBox.margin>
-                </HBox>
-                <HBox alignment="CENTER" prefHeight="15.0" prefWidth="1000.0">
-                    <children>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onActionSave" prefWidth="120.0" style="-fx-background-color: #22a6b3; -fx-background-radius: 20; -fx-border-color: #192a56; -fx-border-radius: 20; -fx-border-width: 2;" text="Save">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onActionUpdate" prefWidth="120.0" style="-fx-background-color: #22a6b3; -fx-background-radius: 20; -fx-border-color: #192a56; -fx-border-radius: 20; -fx-border-width: 2;" text="Update">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onActionDelete" prefWidth="120.0" style="-fx-background-color: #22a6b3; -fx-background-radius: 20; -fx-border-color: #192a56; -fx-border-radius: 20; -fx-border-width: 2;" text="Delete">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onActionReset" prefWidth="120.0" style="-fx-background-color: #22a6b3; -fx-background-radius: 20; -fx-border-color: #192a56; -fx-border-radius: 20; -fx-border-width: 2;" text="Reset">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </Button>
-                    </children>
-                </HBox>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
             </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
         </VBox>
-        <TableView fx:id="tableCustomer" layoutX="51.2" layoutY="10.0" onMouseClicked="#setData" prefHeight="327.0" prefWidth="899.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="50.0">
-            <columns>
-                <TableColumn fx:id="idColumn" prefWidth="101.59998625516891" text="Customer ID" />
-                <TableColumn fx:id="nameColumn" prefWidth="144.80003356933594" text="Name" />
-                <TableColumn fx:id="emailColumn" prefWidth="212.0" text="Email" />
-                <TableColumn fx:id="nicColumn" prefWidth="231.199951171875" text="NIC" />
-                <TableColumn fx:id="addressColumn" prefWidth="131.20001220703125" text="Address" />
-                <TableColumn fx:id="contactColumn" prefWidth="128.800048828125" text="Contact" />
-            </columns>
-            <columnResizePolicy>
-                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-            </columnResizePolicy>
-        </TableView>
     </children>
 </AnchorPane>

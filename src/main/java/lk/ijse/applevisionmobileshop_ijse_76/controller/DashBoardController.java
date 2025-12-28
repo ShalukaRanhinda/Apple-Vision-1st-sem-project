@@ -15,6 +15,7 @@ import lk.ijse.applevisionmobileshop_ijse_76.dto.UserDTO;
 import lk.ijse.applevisionmobileshop_ijse_76.model.UserModel;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class DashBoardController {
 
@@ -28,21 +29,39 @@ public class DashBoardController {
 
     @FXML
     private void goToCustomerView()throws IOException {
-        Parent newFxml = HelloApplication.loadFXML("/view/Customer");
-        mainContent.getChildren().setAll(newFxml);
+        navigateTo("/view/Customer.fxml");
     }
 
     public void goToSupplierView(ActionEvent actionEvent) throws IOException {
-        Parent newFxml = HelloApplication.loadFXML("/view/Supplier");
-        mainContent.getChildren().setAll(newFxml);
+        navigateTo("/view/Supplier.fxml");
     }
 
     public void goToOrderView(ActionEvent actionEvent) throws IOException {
-        Parent newFxml = HelloApplication.loadFXML("/view/Order");
-        mainContent.getChildren().setAll(newFxml);
+        navigateTo("/view/Order.fxml");
+
     }
 
+    public void goToStockView(ActionEvent actionEvent) throws IOException {
+        navigateTo("/view/Stock.fxml");
 
+    }
+    public void goToUserView(ActionEvent actionEvent) throws IOException {
+        navigateTo("/view/User.fxml");
+
+    }
+
+    private void navigateTo(String path) {
+        try {
+            mainContent.getChildren().clear();
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(path));
+            anchorPane.prefWidthProperty().bind(mainContent.widthProperty());
+            anchorPane.prefHeightProperty().bind(mainContent.heightProperty());
+            mainContent.getChildren().add(anchorPane);
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Page not found", ButtonType.OK).show();
+            e.printStackTrace();
+        }
+    }
 
 
 
@@ -61,7 +80,11 @@ public class DashBoardController {
                 UserDTO currentUser = Session.getCurrentUser();
 
                 if (currentUser != null) {
-                    userModel.updateUserStatus(currentUser.getId(), "Inactive");
+                    try {
+                        userModel.updateUserStatus(currentUser.getId(), "Inactive");
+                    } catch (SQLException | ClassNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
                     Session.clear();
                 }
 
@@ -77,6 +100,7 @@ public class DashBoardController {
             }
         });
     }
+
 
 
 }

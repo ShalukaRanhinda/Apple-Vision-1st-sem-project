@@ -9,29 +9,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/view/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 720);
-        //stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-
+     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
+     Parent load = fxmlLoader.load();
+     Scene scene = new Scene(load);
+     stage.setTitle("Apple Vision Mobile Shop");
+     stage.setScene(scene);
+     stage.setMinHeight(700);
+     stage.setMinWidth(500);
+     stage.show();
     }
 
-    public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
+    public static void main(String[] args){launch(args);}
 
-    public static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
 
-    public static void main(String[] args) {
-        launch();
-
-    }
 }

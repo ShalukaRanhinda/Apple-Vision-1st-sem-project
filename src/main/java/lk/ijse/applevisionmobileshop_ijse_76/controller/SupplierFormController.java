@@ -43,7 +43,7 @@ public class SupplierFormController implements Initializable {
     private TableColumn<SupplierDTO, String> nicColumn;
 
     @FXML
-    private TableView<SupplierDTO> tableCustomer;
+    private TableView<SupplierDTO> tableSupplier;
 
     @FXML
     private TextField textAddress;
@@ -186,7 +186,7 @@ public class SupplierFormController implements Initializable {
 
     @FXML
     void setData(MouseEvent event) {
-        SupplierDTO customerDto = tableCustomer.getSelectionModel().getSelectedItem();
+        SupplierDTO customerDto = tableSupplier.getSelectionModel().getSelectedItem();
         if (customerDto != null) {
             lblId.setText(customerDto.getSupplierId());
             textName.setText(customerDto.getName());
@@ -284,7 +284,7 @@ public class SupplierFormController implements Initializable {
             if(supplierDtos != null && !supplierDtos.isEmpty()){
 //                showSuccessMessage("Supplier loaded: " + supplierDtos.size());
                 ObservableList<SupplierDTO> supplierObservableList = FXCollections.observableArrayList(supplierDtos);
-                tableCustomer.setItems(supplierObservableList);
+                tableSupplier.setItems(supplierObservableList);
             }
 //            else {
 //                showErrorMessage("No supplier found!");
